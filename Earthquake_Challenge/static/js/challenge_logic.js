@@ -49,7 +49,7 @@ let majorEarthquakes = new L.LayerGroup();
 // 2. Add a reference to the tectonic plates group to the overlays object.
 let overlays = {
   "Earthquakes": allEarthquakes,
-  "Tectonics": tectonicPlates,
+  "Tectonic Plates": tectonicPlates,
   "Major Earthquakes": majorEarthquakes
 };
 
@@ -173,7 +173,7 @@ legend.onAdd = function() {
   L.geoJSON(data, {
     style: styleInfo,
       onEachFeature: function(feature, layer) {
-        layer.bindPopup("Tectonics: " + feature.properties.Name);
+        layer.bindPopup("Tectonic Plates: " + feature.properties.Name);
     }
 
   }).addTo(tectonicPlates);
